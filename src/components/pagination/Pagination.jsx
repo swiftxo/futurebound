@@ -1,9 +1,19 @@
-import React from 'react'
+"use client"
+import React, { use } from 'react'
 import styles from './pagination.module.css' 
-const Pagination = () => {
+import { useRouter } from 'next/navigation'
+const Pagination = ( {page, hasPrev, hasNext} ) => {
+  const router = useRouter() 
   return (
-    <div>Pagination</div>
-  )
+    <div className={styles.container}>
+      <button className={styles.button} disabled = {!hasPrev} onClick={()=> router.push(`?page=${page - 1}`)}>Previous</button>
+      <button className={styles.button} disabled = {!hasNext} onClick={()=> router.push(`?page=${page + 1}`)}>Next</button>
+
+
+
+
+    </div>
+  ) 
 }
 
 export default Pagination
