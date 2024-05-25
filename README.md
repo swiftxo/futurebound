@@ -1,8 +1,8 @@
                          
 <br/>
 <div align="center">
-<a href="https://github.com/swiftxo/starlite">
-<img src="https://i.ibb.co/qCNh7qW/image.png" alt="Product Screenshot">
+<a href="https://github.com/swiftxo/futurebound">
+<img src="https://i.ibb.co/BLLTxZR/FUTUREBOUND-DARK-TRANSPARENT.png" alt="Product Screenshot">
 
 </a>
 <h3 align="center">Futurebound: A web blog</h3>
