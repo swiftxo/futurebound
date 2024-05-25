@@ -1,0 +1,42 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[7].use[3]!./src/app/about/about.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+.about_container__Ucmgi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about_grid__H8z_o {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .about_column__D23M5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .about_text__rBosx {
+    padding: 20px;
+    font-size: 24px;
+  }
+  .about_header__i5X7l {
+    padding: 20px;
+    font-size: 75px;
+  }
+  
+  .about_image__mD_hE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

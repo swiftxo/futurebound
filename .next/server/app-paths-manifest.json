@@ -1,0 +1,11 @@
+{
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/write/page": "app/write/page.js",
+  "/api/comments/route": "app/api/comments/route.js",
+  "/posts/[slug]/page": "app/posts/[slug]/page.js",
+  "/api/posts/route": "app/api/posts/route.js",
+  "/api/categories/route": "app/api/categories/route.js",
+  "/api/posts/[slug]/route": "app/api/posts/[slug]/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
+}
