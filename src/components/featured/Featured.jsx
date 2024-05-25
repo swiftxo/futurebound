@@ -10,7 +10,7 @@ const Featured = () => {
           <Image src="/p1.jpeg" alt ="" fill/>
         </div>
         <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}> Welcome to the blog!</h1>
+          <h1 className={styles.postTitle}> Welcome to the blog</h1>
           <p className={styles.postDesc}>
             Welcome to futurebound! This blog was done as both a personal and professional project. 
             I've always been the type to buy and not borrow, so why should i host this on another platform?

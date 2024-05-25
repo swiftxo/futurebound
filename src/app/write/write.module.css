@@ -1,33 +1,36 @@
-.container{
-
-}
-
-.editor{
+.container {
+    /* Add your styles for the container if needed */
+  }
+  .textArea {
+    font-family: 'Merriweather', serif;
+  }
+  
+  .editor {
     display: flex;
     gap: 20px;
     height: 700px;
     position: relative;
-}
-
-.textArea{
+  }
+  
+  .textArea {
     width: 100%;
-}
-
-.input{
+  }
+  
+  .input {
     padding: 50px;
     font-size: 64px;
     border: none;
     outline: none;
     background-color: transparent;
-    color: var(--textColor)
-}
-
-.input::placeholder{
+    color: var(--textColor);
+  }
+  
+  .input::placeholder {
     color: var(--softTextColor);
-}
- 
-
-.button, .addButton{
+  }
+  
+  .button,
+  .addButton {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -36,41 +39,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:pointer;
-}
-
-.addButton{
+    cursor: pointer;
+  }
+  
+  .addButton {
     border-color: green;
-}
-
-.icon {
+  }
+  
+  .icon {
     fill: black;
-}
-
-.publish{
-    position:absolute;
+  }
+  
+  .publish {
+    position: absolute;
     top: 30px;
     right: 20px;
     padding: 10px 20px;
     border: none;
     background-color: green;
     color: white;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 20px;
-}
-
-
-@media (prefers-color-scheme: dark) {
+  }
+  
+  @media (prefers-color-scheme: dark) {
     .icon {
-        fill: white;
+      fill: white;
     }
-}
-
-.iconDark {
+  }
+  
+  .iconDark {
     filter: invert(1);
   }
-
-  .add{
+  
+  .add {
     display: flex;
     gap: 20px;
     background-color: var(--bg);
@@ -80,3 +82,83 @@
     left: 50px;
   }
   
+  .preview {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .fileInput {
+    margin-bottom: 20px;
+  }
+  
+  .editorContent {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    min-height: 300px;
+  }
+  
+  /* Style for the category selector */
+.select {
+  padding: 8px 12px; /* Add padding */
+  font-size: 16px; /* Adjust font size */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  background-color: #fff; /* Add background color */
+  color: #333; /* Adjust text color */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Style for the category selector dropdown arrow */
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Adjust the appearance of the dropdown arrow */
+.select-arrow::after {
+  content: "";
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+/* Style for dropdown menu */
+.select-menu {
+  position: absolute;
+  top: calc(100% + 5px); /* Position the dropdown below the selector */
+  left: 0;
+  z-index: 1;
+  background-color: #fff; /* Add background color */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Add border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  padding: 8px 0; /* Add padding */
+  max-height: 200px; /* Limit the height of the dropdown */
+  overflow-y: auto; /* Add scrollbar when needed */
+}
+
+/* Style for dropdown menu items */
+.select-menu-item {
+  padding: 8px 12px; /* Add padding */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Style for dropdown menu items on hover */
+.select-menu-item:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}

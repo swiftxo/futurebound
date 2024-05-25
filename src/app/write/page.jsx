@@ -25,6 +25,23 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  const [ categories, setCategories] = useState([]);
+
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch("/api/categories");
+        const data = await response.json();
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching categories:", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -101,23 +118,28 @@ const WritePage = () => {
         type="text"
         placeholder="Title"
         className={styles.input}
+        value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
-        <option value="style">style</option>
-        <option value="fashion">fashion</option>
-        <option value="food">food</option>
-        <option value="culture">culture</option>
-        <option value="travel">travel</option>
-        <option value="coding">coding</option>
+      <select
+        className={styles.select}
+        value={catSlug}
+        onChange={(e) => setCatSlug(e.target.value)}
+      >
+        <option value="">Select a category</option>
+        {categories.map((category) => (
+          <option key={category.id} value={category.slug}>
+            {category.title}
+          </option>
+        ))}
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plus.png" alt="" width={16} height={16} />
+          <Image src="/add.svg" alt="" width={56} height={56} />
         </button>
         {open && (
           <div className={styles.add}>
-            <input
+             <input
               type="file"
               id="image"
               onChange={(e) => setFile(e.target.files[0])}
@@ -125,15 +147,10 @@ const WritePage = () => {
             />
             <button className={styles.addButton}>
               <label htmlFor="image">
-                <Image src="/image.png" alt="" width={16} height={16} />
+                <Image src="/image.svg" alt="" width={32} height={32} />
               </label>
             </button>
-            <button className={styles.addButton}>
-              <Image src="/external.png" alt="" width={16} height={16} />
-            </button>
-            <button className={styles.addButton}>
-              <Image src="/video.png" alt="" width={16} height={16} />
-            </button>
+      
           </div>
         )}
         <ReactQuill
@@ -149,6 +166,6 @@ const WritePage = () => {
       </button>
     </div>
   );
+  
 };
-
 export default WritePage;

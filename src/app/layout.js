@@ -11,8 +11,8 @@ const montserrat = Montserrat({ subsets: ['latin'] });
 const merriweather = Merriweather({ subsets: ['latin'], weight: '400' });
 
 export const metadata = {
-  title: 'Blog App',
-  description: 'The best blog app!',
+  title: 'Futurebound',
+  description: 'The future uncharted!',
 };
 
 export default function RootLayout({ children }) {

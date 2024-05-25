@@ -27,18 +27,19 @@ a {
 }
 
 .dark {
-  --bg: #0f172a;
-  --textColor: #ddd;
-  --softBg: #1f273a;
-  --softTextColor: #a6a6a6;
+  --bg: #13130E;
+  --textColor: #FFF9A2;
+  --softBg: #26241B;
+  --softTextColor: #E0DBA0;
 }
 
 .light {
-  --bg: white;
-  --textColor: black;
+  --bg: #EAE9E9;
+  --textColor: #13130E;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
 }
+
 
 .container {
   min-height: 100vh;
